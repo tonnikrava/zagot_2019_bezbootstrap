@@ -12,7 +12,7 @@ use App\Tovari;
 
 class MainController extends Controller
 {
-    public function getIndex() //Вывод главной страницы 2
+    public function getIndex() //Вывод главной страницы 245 переделываю
     {
         $material = Page::where('slug', '=', 'index')->get();
         $novosti = Nowosti::latest()->limit(4)->get();
@@ -23,7 +23,7 @@ class MainController extends Controller
     }
 
 
-    public function newss() // вывод оглавлений новостей
+    public function newss() // вывод оглавлений новостей на сайте
     {
         $novostis = Nowosti::latest()->get();
 
