@@ -132,13 +132,13 @@
     </footer>
 @show
 
-<link href="{{ asset('css/drift.css') }}" rel="stylesheet" type="text/css">
+<link href="{{ asset('css/style2.css') }}" rel="stylesheet" type="text/css">
 <script src="{{ asset('js/java-griobanij-skript.js') }}"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 <script src="{{ asset('js/menu.js') }}"></script>
-<script src="{{ asset('js/drift.js') }}"></script>
+<script src="{{ asset('js/imgzoom.js') }}"></script>
 
 <script>
     $(function () {
@@ -181,12 +181,16 @@
         }
     }
     ;
-    $(".demo01").animatedModal({
-        animatedIn: 'lightSpeedIn',
-        animatedOut: 'bounceOutDown',
-        color: '#d2f0ee'
+
+
+
+
+    $(document).ready(function(){
+        $('.ex1').zoom();
+
     });
 </script>
+
 
 
 </body>

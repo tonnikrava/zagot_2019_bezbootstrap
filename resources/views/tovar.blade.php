@@ -41,16 +41,14 @@
                 <div class="container mt-5 overflow-hidden">
 
 
-                    <div class="wrapper">
+                    <div>
 
                         @foreach ($tovar as $tovarss)
 
-                            <div class="drift-demo-trigger">
-                                <img class="drift-demo-triggerr"
-                                     data-zoom="{{Voyager::image($tovarss->image)}}"
-                                     src="{{Voyager::image($tovarss->image)}}">
-                            </div>
-                            <div class="detail"></div>
+                            <span class='zoom ex1'><img src="{{Voyager::image($tovarss->image)}}" width='300' height='220'><p>Нажми</p></span>
+                            <span class='zoom ex1'><img src="{{Voyager::image($tovarss->img2)}}" width='300' height='220'><p>Нажми</p></span>
+
+
                     </div>
 
                     <h6 class="mt-3">{!!  $tovarss->title !!}</h6>
@@ -70,16 +68,16 @@
                 <div class="container mt-5 overflow-hidden">
 
 
-                    <div class="wrapper">
+                    <div>
 
                         @foreach ($tovar as $tovarss)
 
-                            <div class="drift-demo-trigger">
-                                <img class="drift-demo-triggerrr"
-                                     data-zoom="{{Voyager::image($tovarss->img2)}}"
-                                     src="{{Voyager::image($tovarss->img2)}}">
-                            </div>
-                            <div class="detaill"></div>
+
+                            <img
+
+                                 src="{{Voyager::image($tovarss->img2)}}">
+
+
                     </div>
 
                     <h6 class="mt-3">{!!  $tovarss->title !!}</h6>
@@ -93,7 +91,6 @@
 
 
             </div>
-
 
 
             <div class="container-fluid px-0" id="counter">
