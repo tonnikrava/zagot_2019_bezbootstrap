@@ -12,7 +12,7 @@ use App\Tovari;
 
 class MainController extends Controller
 {
-    public function getIndex() //Вывод главной страницы сайтаа
+    public function getIndex() //Вывод главной страницы приложения
     {
         $material = Page::where('slug', '=', 'index')->get();
         $novosti = Nowosti::latest()->limit(4)->get();
