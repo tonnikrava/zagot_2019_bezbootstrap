@@ -45,10 +45,10 @@
 
                         @foreach ($tovar as $tovarss)
 
-                            <span class='zoom ex1'><img src="{{Voyager::image($tovarss->image)}}" width='300' height='220'><p>Нажми</p></span>
-                            <span class='zoom ex1'><img src="{{Voyager::image($tovarss->img2)}}" width='300' height='220'><p>Нажми</p></span>
-
-
+                            <span class='zoom ex1'><img src="{{Voyager::image($tovarss->image)}}" width='370' height='220'><p>Нажми</p></span>
+                            <span class='zoom ex1'><img src="{{Voyager::image($tovarss->img2)}}" width='370' height='220'><p>Нажми</p></span>
+                            <span class='zoom ex1'><img src="{{Voyager::image($tovarss->img3)}}" width='370' height='220'><p>Нажми</p></span>
+                            <span class='zoom ex1'><img src="{{Voyager::image($tovarss->img4)}}" width='370' height='220'><p>Нажми</p></span>
                     </div>
 
                     <h6 class="mt-3">{!!  $tovarss->title !!}</h6>
