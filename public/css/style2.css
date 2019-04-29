@@ -1,27 +1,30 @@
 /* галлерея с фотками zoom 'aatrn */
-.zoom p { position:absolute; top:3px; right:28px; color:#555; font-weight:600; font-size:13px;}
+.zoom p { position: absolute; top: 3px; right: 28px; color: #555; font-weight: 600; font-size: 13px;}
 
 /* these styles are for the demo, but are not required for the plugin */
 .zoom {
-    display:inline-block;
-    position: relative;
-    }
+  width:80%;
+  margin: 10px auto;
+  display: inline-block;
+  position: relative;
+}
 
 /* magnifying glass icon */
 .zoom:after {
-    content:'';
-    display:block;
-    width:33px;
-    height:33px;
-    position:absolute;
-    top:0;
-    right:0;
-    background:url(../icon.png);
-    }
+  content: '';
+  display: block;
+  width: 33px;
+  height: 33px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url(../icon.png);
+}
 
 .zoom img {
-    display: block;
-    }
+  width: 100%;
+  display: block;
+}
 
 .zoom img::selection { background-color: transparent; }
 

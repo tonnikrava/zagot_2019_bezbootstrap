@@ -46,14 +46,14 @@
                                 <a href="{!!  $cats->category_id !!}/{!!  $cats->slug !!}">
                                     <div class="card mb-4">
                                         <img class="w-100" alt="новости"
-                                             src="{{Voyager::image($cats->thumbnail('cropped','image'))}}"/>
+                                             src="{{Voyager::image($cats->thumbnail('small','image'))}}"/>
                                         <div class="card-body">
                                             <h6 class="mt-3">{!!  $cats->title !!}</h6>
 
 
                                         </div>
                                         <div class="card-date">
-                                            <p>{!!  $cats->created_at->format('d-m-Y') !!}</p></div>
+                                            <p>{!!  $cats->price !!} грн</p></div>
                                     </div>
                                 </a>
                             </div>
