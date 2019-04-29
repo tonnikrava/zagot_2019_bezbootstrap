@@ -25,7 +25,7 @@
 				<div class="container my-5 py5">
 					<h1 class="text-uppercase text-white text-center" style="margin-top:10%;margin-bottom:4%;">
 						@foreach ($tovar as $tovarss) {!!  $tovarss->title!!}  </h1>
-					{!!$tovarss->body!!}  @endforeach
+					<p class="lead text-white">{!!$tovarss->body!!}</p>  @endforeach
 				</div>
 			</div>
 		</div>
