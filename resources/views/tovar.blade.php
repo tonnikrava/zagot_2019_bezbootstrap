@@ -3,7 +3,7 @@
 @section('mainheader')
 	<title>Категориия продукции</title>
 	<meta name="keywords" content="">
-	<meta name="description" content="око новости">
+	<meta name="description" content="Категориия продукции">
 @endsection
 
 @section('navbar')
