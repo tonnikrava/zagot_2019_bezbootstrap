@@ -140,6 +140,7 @@
 <script src="{{ asset('js/menu.js') }}"></script>
 <script src="{{ asset('js/imgzoom.js') }}"></script>
 
+
 <script>
     $(function () {
         $("#accordion").accordion({heightStyle: "content"})
@@ -183,12 +184,8 @@
     ;
 
 
+    
 
-
-    $(document).ready(function(){
-        $('.ex1').zoom();
-
-    });
 </script>
 
 

@@ -1,32 +1,101 @@
-/* галлерея с фотками zoom 'aatrn */
-.zoom p { position: absolute; top: 3px; right: 28px; color: #555; font-weight: 600; font-size: 13px;}
+/* галлерея с фотками zoom */
+/* Compatibility styles for frameworks like bootstrap, foundation e.t.c */
+.xzoom-source img, .xzoom-preview img, .xzoom-lens img {
+  display: block;
+  max-width: none;
+  max-height: none;
+}
+/* --------------- */
 
-/* these styles are for the demo, but are not required for the plugin */
-.zoom {
-  width:80%;
-  margin: 10px auto;
+/* xZoom Styles below */
+.xzoom-container {
   display: inline-block;
-  position: relative;
 }
 
-/* magnifying glass icon */
-.zoom:after {
-  content: '';
+.xzoom-thumbs {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.xzoom {
+
+  margin-bottom: 15px;
+}
+.xzoom2, .xzoom3, .xzoom4, .xzoom5 {
+
+  margin-bottom: 15px;
+}
+
+/* Thumbs */
+.xzoom-gallery, .xzoom-gallery2, .xzoom-gallery3, .xzoom-gallery4, .xzoom-gallery5 {
+
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+
+.xzoom-source, .xzoom-hidden {
   display: block;
-  width: 33px;
-  height: 33px;
+  position: static;
+  float: none;
+  clear: both;
+}
+
+/* Everything out of border is hidden */
+.xzoom-hidden {
+  overflow: hidden;
+}
+
+/* Preview */
+.xzoom-preview {
+
+  background: #2f4f4f;
+
+}
+
+/* Lens */
+.xzoom-lens {
+
+
+  cursor: crosshair;
+}
+
+/* Loading */
+.xzoom-loading {
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  opacity: .7;
+  background: url(../images/xloading.gif);
+  width: 48px;
+  height: 48px;
+}
+
+/* Additional class that applied to thumb when it is active */
+.xactive {
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(74,169,210,1);
+  -moz-box-shadow: 0px 0px 3px 0px rgba(74,169,210,1);
+  box-shadow: 0px 0px 3px 0px rgba(74,169,210,1);
+  border: 1px solid #4aaad2;
+}
+
+/* Caption */
+.xzoom-caption {
   position: absolute;
-  top: 0;
-  right: 0;
-  background: url(../icon.png);
-}
-
-.zoom img {
+  bottom: -43px;
+  left: 0;
+  background: #000;
   width: 100%;
-  display: block;
+  text-align: left;
 }
 
-.zoom img::selection { background-color: transparent; }
+.xzoom-caption span {
+  color: #fff;
+  font-family: Arial, sans-serif;
+  display: block;
+  font-size: 0.75em;
+  font-weight: bold;
+  padding: 10px;
+}
 
 
 

@@ -21,11 +21,18 @@
 			<div class="jumbotron-foto py-5 header_jamberton_foto"
 			     style="background-color: rgba(0, 0, 0, 0.8196078431372549);">
 				<img class="lazyy fonimg" style="opacity: 0.15;" alt=" "
-				     data-src="@foreach ($tovar as $tovarss){{Voyager::image($tovarss->thumbnail('cropped','image'))}}@endforeach"/>
+				     data-src="@foreach ($tovar as $tovarss)
+				     @if(isset($tovarss->image))
+				     {{Voyager::image($tovarss->thumbnail('cropped','image'))}}
+				
+				     @else
+						     ../images/empty-product-header.jpg
+							@endif
+				     @endforeach"/>
 				<div class="container my-5 py5">
 					<h1 class="text-uppercase text-white text-center" style="margin-top:10%;margin-bottom:4%;">
 						@foreach ($tovar as $tovarss) {!!  $tovarss->title!!}  </h1>
-					<p class="lead text-white">{!!$tovarss->body!!}</p>  @endforeach
+					<p class="lead text-white">{!!$tovarss->body!!}</p> @endforeach
 				</div>
 			</div>
 		</div>
@@ -37,16 +44,75 @@
 						
 						
 						@foreach ($tovar as $tovarss)
-							@if(isset($tovarss->image))
+							
+							
+							
+							<div class="xzoom-container">
+								
+								@if(isset($tovarss->image))
+									
+									
+									
+									<img class="xzoom" id="xzoom-default" src="{{Voyager::image($tovarss->thumbnail('medium','image'))}}"
+									     xoriginal="{{Voyager::image($tovarss->image)}}"/>
+									
+									@if(isset($tovarss->img2))
+										<div class="xzoom-thumbs">
+											<a href="{{Voyager::image($tovarss->image)}}"><img class="xzoom-gallery" width="80"
+											                                                   src="{{Voyager::image($tovarss->thumbnail('small','image'))}}"
+											                                                   xpreview="{{Voyager::image($tovarss->thumbnail('medium','image'))}}"
+											                                                   title="{!!$tovarss->title!!} первое фото"></a>
+											
+											<a href="{{Voyager::image($tovarss->img2)}}"><img class="xzoom-gallery" width="80"
+											                                                  src="{{Voyager::image($tovarss->thumbnail('medium','img2'))}}"
+											                                                  title="{!!$tovarss->title!!} фото 2"></a>
+											@if(isset($tovarss->img3))
+												<a href="{{Voyager::image($tovarss->img3)}}"><img class="xzoom-gallery" width="80"
+												                                                  src="{{Voyager::image($tovarss->thumbnail('medium','img3'))}}"
+												                                                  title="{!!$tovarss->title!!} фото 3"></a>@endif
+											@if(isset($tovarss->img4))
+												<a href="{{Voyager::image($tovarss->img4)}}"><img class="xzoom-gallery" width="80"
+												                                                  src="{{Voyager::image($tovarss->thumbnail('medium','img4'))}}"
+												                                                  title="{!!$tovarss->title!!} фото 4"></a>@endif
+										</div>
+									@endif
+								@else
+									<img class="krug240 lazyy" alt="работы" src="../images/empty-product.jpg" style="">
+								@endif
+							
+							</div>
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							@if(isset($tovarss->image4))
 								<span class='zoom ex1'><img src="{{Voyager::image($tovarss->image)}}"><p>Нажми</p></span>
 							@endif
-							@if(isset($tovarss->img2))
+							@if(isset($tovarss->img24))
 								<span class='zoom ex1'><img src="{{Voyager::image($tovarss->img2)}}"><p>Нажми</p></span>
 							@endif
-							@if(isset($tovarss->img3))
+							@if(isset($tovarss->img34))
 								<span class='zoom ex1'><img src="{{Voyager::image($tovarss->img3)}}"><p>Нажми</p></span>
 							@endif
-							@if(isset($tovarss->img4))
+							@if(isset($tovarss->img44))
 								<span class='zoom ex1'><img src="{{Voyager::image($tovarss->img4)}}"><p>Нажми</p></span>
 							@endif
 					</div>
