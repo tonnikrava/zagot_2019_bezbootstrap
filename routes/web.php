@@ -17,11 +17,12 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 Route::get('/',['uses'=>'MainController@getIndex','as'=>'home']);
+Route::get('contacts',function () {return view('contacts');});// для контактов просто возращаем вид без конторллера
 Route::get('news', ['uses' => 'MainController@newss', 'as' => 'newss']);
 
 
 
-Route::get('{tovar}', ['uses' => 'MainController@category', 'as' => 'page']);
+Route::get('{tovar}', ['uses' => 'MainController@category', 'as' => 'page']); // для всех страниц и категорий
 Route::get('news/{page}', ['uses' => 'MainController@news', 'as' => 'news']);
 Route::get('{catid}/{tovarid}', ['uses' => 'MainController@tovar', 'as' => 'tovar']);
 

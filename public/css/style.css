@@ -378,15 +378,15 @@ ul.footermenu {
     width: 100%;
     height: 100px;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0.92) 20%,
-    rgba(255, 255, 255, 0.8) 30%,
-    rgba(255, 255, 255, 0.6) 40%,
-    rgba(255, 255, 255, 0.5) 50%,
-    rgba(255, 255, 255, 0.4) 60%,
-    rgba(255, 255, 255, 0.3) 70%,
-    rgba(255, 255, 255, 0.2) 80%,
-    rgba(255, 255, 255, 0.1) 90%,
-    rgba(255, 255, 255, 0) 100%);
+    rgba(0, 0, 0, 0.92) 20%,
+    rgba(0, 0, 0, 0.8) 30%,
+    rgba(0, 0, 0, 0.75) 40%,
+    rgba(0, 0, 0, 0.7) 50%,
+    rgba(0, 0, 0, 0.65) 60%,
+    rgba(0, 0, 0, 0.6) 70%,
+    rgba(0, 0, 0, 0.4) 80%,
+    rgba(0, 0, 0, 0.2) 90%,
+    rgba(0, 0, 0, 0) 100%);
     z-index: 1;
     }
 
@@ -441,8 +441,8 @@ ul.footermenu {
         }
 
     #contmapfon {
-        top: -50px;
-        height: 90px;
+        top: -64px;
+        height: 140px;
         }
 
     #contmap iframe {

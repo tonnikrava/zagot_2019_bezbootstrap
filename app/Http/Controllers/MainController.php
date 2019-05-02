@@ -15,7 +15,7 @@ class MainController extends Controller
     public function getIndex() //Вывод главной страницы 245 переделываюю
     {
         $material = Page::where('slug', '=', 'index')->get();
-        $novosti = Nowosti::latest()->limit(4)->get();
+        $novosti = Nowosti::latest()->limit(4)->get(); // Вывод 4-x новостей на главной
         return view('index')->with([
             'novosti' => $novosti,
             'material' => $material
