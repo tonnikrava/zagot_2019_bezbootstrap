@@ -1,23 +1,46 @@
-a {color:#40679D;}
+a {
+    color: #40679D;
+}
 
 /* менюшка */
-.navbar{margin-top:30px; transition:all 0.2s ease-out;}
-.navbar li {margin-right:20px;}
-.logoimg {width: 170px}/* ширина фото логотипа без js */
-.fixedd {width: 100px}/* ширина фото логотипа c js */
-.navbar-nav{text-transform: uppercase; font-size: 1em; font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;}
-.navbar-brand {font-size: 1rem;}
+.navbar {
+    margin-top: 30px;
+    transition: all 0.2s ease-out;
+}
+
+.navbar li {
+    margin-right: 20px;
+}
+
+.logoimg {
+    width: 170px
+}
+
+/* ширина фото логотипа без js */
+.fixedd {
+    width: 100px
+}
+
+/* ширина фото логотипа c js */
+.navbar-nav {
+    text-transform: uppercase;
+    font-size: 1em;
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+}
+
+.navbar-brand {
+    font-size: 1rem;
+}
 
 /*  клас который добовляется к меню при прокрутке  */
 .affix {
-    margin-top:0;
+    margin-top: 0;
     padding-top: 0.2em !important;
     padding-bottom: 0.2em !important;
 
-    transition:all 0.2s ease-out;
-    background-color: rgba(0, 0, 0, 0.77)!important
-    }
-
+    transition: all 0.2s ease-out;
+    background-color: rgba(0, 0, 0, 0.77) !important
+}
 
 /*  линия перед h2 заголовком   */
 .statitext h2 {
@@ -25,7 +48,8 @@ a {color:#40679D;}
     padding-left: 27px;
     position: relative;
 
-    }
+}
+
 .statitext h2:before {
     position: absolute;
     left: 0;
@@ -34,16 +58,16 @@ a {color:#40679D;}
     height: 102%;
     width: 6px;
     background: #9dcaeb;
-    }
+}
 
 /*  вывод новостей   */
 .card {
 
     box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
-    border: 0px solid rgba(0,0,0,.125);
+    border: 0px solid rgba(0, 0, 0, .125);
     border-radius: 0rem;
     overflow: hidden;
-    }
+}
 
 .card img {
     -webkit-transform: scale(1);
@@ -52,18 +76,21 @@ a {color:#40679D;}
     transition: .4s ease-in-out;
     width: 100%;
     filter: grayscale(60%);
-    }
+}
 
 .card:hover img {
     -webkit-transform: rotate(5deg) scale(1.1);
     transform: rotate(5deg) scale(1.1);
     filter: grayscale(0%);
 
-    }
+}
+
 .card h6 {
-font-weight: 600;text-transform: capitalize;
-    color:white;
-    }
+    font-weight: 600;
+    text-transform: capitalize;
+    color: white;
+}
+
 .card-body {
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
@@ -71,17 +98,30 @@ font-weight: 600;text-transform: capitalize;
     height: 100px;
     padding: 1.25rem;
     z-index: 1;
-    background: rgba(255,255,255,0);
-    background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(100%, rgba(0,0,0,1)));
-    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%);
-    background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%);
-    background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%);
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000', GradientType=0 );
-    }
-.card-date {position: absolute; right: 0;bottom: 0; width: 71px;height: 22px;z-index: 2;}
-.card-date p{font-size: 0.8em;color: #d8d8d8;}
+    background: rgba(255, 255, 255, 0);
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(0, 0, 0, 1)));
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#000000', GradientType=0);
+}
+
+.card-date {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 71px;
+    height: 22px;
+    z-index: 2;
+}
+
+.card-date p {
+    font-size: 0.8em;
+    color: #d8d8d8;
+}
+
 .headerrline_sontsiconki_facebook {
     width: 29px;
     height: 31px;
@@ -90,12 +130,12 @@ font-weight: 600;text-transform: capitalize;
     background-position: -91px 0;
     opacity: 1;
     filter: invert(52%);
-    }
+}
 
 .headerrline_sontsiconki_facebook:hover {
     opacity: 0.5;
     transition: all .2s;
-    }
+}
 
 .headerrline_sontsiconki_vk {
     width: 29px;
@@ -105,12 +145,12 @@ font-weight: 600;text-transform: capitalize;
     background-position: -123px 0;
     opacity: 1;
     filter: invert(52%);
-    }
+}
 
 .headerrline_sontsiconki_vk:hover {
     opacity: 0.5;
     transition: all .2s;
-    }
+}
 
 .headerrline_sontsiconki_instagram {
     width: 29px;
@@ -120,12 +160,12 @@ font-weight: 600;text-transform: capitalize;
     background-position: -156px 0;
     opacity: 1;
     filter: invert(52%);
-    }
+}
 
 .headerrline_sontsiconki_instagram:hover {
     opacity: 0.5;
     transition: all .2s;
-    }
+}
 
 .headerrline_sontsiconki_viber {
     width: 32px;
@@ -135,12 +175,12 @@ font-weight: 600;text-transform: capitalize;
     background-position: -58px 0;
     opacity: 1;
     filter: invert(52%);
-    }
+}
 
 .headerrline_sontsiconki_viber:hover {
     opacity: 0.5;
     transition: all .2s;
-    }
+}
 
 .headerrline_sontsiconki_telegram {
     width: 29px;
@@ -150,12 +190,12 @@ font-weight: 600;text-transform: capitalize;
     background-position: -190px 0;
     opacity: 1;
     filter: invert(52%);
-    }
+}
 
 .headerrline_sontsiconki_telegram:hover {
     opacity: 0.5;
     transition: all .2s;
-    }
+}
 
 .headerrline_sontsiconki_scype {
     width: 29px;
@@ -165,12 +205,12 @@ font-weight: 600;text-transform: capitalize;
     background-position: -26px 0;
     opacity: 1;
     filter: invert(52%);
-    }
+}
 
 .headerrline_sontsiconki_scype:hover {
     opacity: 0.5;
     transition: all .2s;
-    }
+}
 
 .headerrline_sontsiconki_wats {
     width: 30px;
@@ -180,20 +220,19 @@ font-weight: 600;text-transform: capitalize;
     background-position: -229px 0;
     opacity: 1;
     filter: invert(52%);
-    }
+}
 
 .headerrline_sontsiconki_wats:hover {
     opacity: 0.5;
     transition: all .2s
-    }
-
+}
 
 /** ---------- фон для видео --------- **/
 .jumbotron-video {
     position: relative;
     overflow: hidden;
     width: 100%;
-    }
+}
 
 .jumbotron-video video {
     position: absolute;
@@ -203,18 +242,18 @@ font-weight: 600;text-transform: capitalize;
     height: 100%;
     object-fit: cover;
     opacity: 0.95;
-    }
+}
 
 .jumbotron-video .container {
     z-index: 2;
     position: relative;
-    }
+}
 
 /** ---------- фон для фото --------- **/
 .jumbotron-foto {
     position: relative;
     overflow: hidden;
-    }
+}
 
 .jumbotron-foto .fonimg {
     position: absolute;
@@ -223,49 +262,72 @@ font-weight: 600;text-transform: capitalize;
     height: 100%;
     object-fit: cover;
     opacity: 0.95;
-    }
+}
 
 .jumbotron-foto .container {
     position: relative;
-    }
+}
 
-.header_jamberton_foto{background-color: rgba(98, 98, 98, 0.15);}
+.header_jamberton_foto {
+    background-color: rgba(98, 98, 98, 0.15);
+}
 
 /*
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------header------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ - */
 
-
-
-
-
 /*
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------rj контент ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ - */
 
+.kartochkatovara {
+    width: 200px;
+    height: 237px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+
+}
+
+.kartochkatovara p {
+    font-size: 17px;
+    line-height: 1.3em;
+    color: #696969;
+    font-weight: 600;
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+}
+
+
+
+.kartochkatovara a:hover {
+    text-decoration: none;
+    color: #a64800;
+}
+
+/* -четыре блока с щётчиком - */
 .chetbl {
     width: 200px;
     height: 237px;
     background-color: white;
     text-align: center;
     box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
-    }
+}
 .chetbl p {
     font-size: 13px;
     line-height: 1.3em;
-    }
-chetbldiv {
+}
+.counter-value {
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+    font-size: 30px;
+    margin: 20px 0 20px 0;
+    color: #646464;
+}
+.chetbldiv {
     position: absolute;
     margin-left: 0;
     width: 168px;
     bottom: -8px;
     height: 8px;
     background-color: #927db8;
-    }
-.counter-value {
-    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-    font-size: 30px;
-    margin: 20px 0 20px 0;
-    color: #646464;
-    }
+}
 
 .zagolovokform {
     width: 100%;
@@ -274,7 +336,7 @@ chetbldiv {
     margin: 46px 0 0 0;
     background: url(/images/green-left-up.png) 0 0 no-repeat,
     url(/images/green-right-down.png) 100% 100% no-repeat;
-    }
+}
 
 @media (min-width: 574px) {
 
@@ -285,8 +347,9 @@ chetbldiv {
         margin: 46px 0 0 0;
         background: url(/images/green-left-up.png) 0 0 no-repeat,
         url(/images/green-right-down.png) 100% 100% no-repeat;
-        }
     }
+}
+
 /*----------footer------------*/
 ul.footercont {
     list-style: none;
@@ -294,7 +357,7 @@ ul.footercont {
     margin-left: -27px;
     font-weight: 600;
     font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-    }
+}
 
 ul.footermenu {
     list-style: none;
@@ -303,23 +366,23 @@ ul.footermenu {
     font-weight: 600;
     font-size: 1.1em;
     font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-    }
+}
 
 .footermenu a {
     color: #253b59 !important;
-    }
+}
 
 .footermenu a:hover {
     color: #8c15b9 !important;
-    }
+}
 
 .footermenu a:active {
     color: #8c15b9 !important;
-    }
+}
 
 .footermenu li {
     color: #8c15b9;
-    }
+}
 
 /*----------кнопка наверх------------*/
 .scroller {
@@ -336,25 +399,25 @@ ul.footermenu {
     height: 45px;
     display: none;
     visibility: hidden;
-    }
+}
 
 @media (min-width: 576px) {
     .scroller {
         right: 10px;
         visibility: visible;
-        }
     }
+}
 
 .scroller:hover {
     opacity: 0.5;
-    }
+}
 
 @media (min-width: 992px) {
     .scroller {
         right: 30px;
         visibility: visible;
-        }
     }
+}
 
 /*----------карта контакты------------*/
 #contmap {
@@ -362,7 +425,7 @@ ul.footermenu {
     position: relative;
     height: 832px;
     margin-top: 40px;
-    }
+}
 
 #contmap iframe {
     position: absolute;
@@ -370,7 +433,7 @@ ul.footermenu {
     width: 100%;
     height: 105.5%;
     object-fit: cover;
-    }
+}
 
 #contmapfon {
     position: absolute;
@@ -388,7 +451,7 @@ ul.footermenu {
     rgba(0, 0, 0, 0.2) 90%,
     rgba(0, 0, 0, 0) 100%);
     z-index: 1;
-    }
+}
 
 #conttel {
     position: absolute;
@@ -400,31 +463,31 @@ ul.footermenu {
     padding: 5px 0 0 5px;
     box-sizing: border-box;
     z-index: 2;
-    }
+}
 
 #conttel ul {
     list-style: none;
     margin-left: -25px;
     font-size: 0.9em;
-    }
+}
 
 #conttel li {
     margin: 15px 0;
     color: #d3d3d3;
     font-size: 0.9em;
-    }
+}
 
 @media (min-width: 576px) {
     #contmap {
-        }
+    }
 
     #conttel {
-        }
     }
+}
 
 @media (min-width: 767px) {
     #contmap {
-        }
+    }
 
     #conttel {
         width: 200px;
@@ -432,26 +495,26 @@ ul.footermenu {
         top: 352px;
         height: 454px;
         padding: 5px 0 0 5px;
-        }
     }
+}
 
 @media (min-width: 992px) {
     #contmap {
         height: 750px;
-        }
+    }
 
     #contmapfon {
         top: -64px;
         height: 140px;
-        }
+    }
 
     #contmap iframe {
         top: -40px;
-        }
+    }
 
     #conttel ul {
         font-size: 1em;
-        }
+    }
 
     #conttel {
         width: 270px;
@@ -459,35 +522,42 @@ ul.footermenu {
         top: 166px;
         height: 387px;
         padding: 18px 0 0 33px;
-        }
     }
+}
 
 @media (min-width: 1200px) {
     #contmap {
-        }
-
-    #conttel {
-        }
     }
 
-
+    #conttel {
+    }
+}
 
 /** ---------- страница контакты --------- **/
 .sprite {
     background-image: url(/images/spritik-new-3x.png);
     background-size: 412px;
-    }
+}
 
 .sprite2 {
     background-image: url(/images/spritik-new-3x.png);
-    }
+}
 
 .semantics_info {
     display: none;
-    }
+}
 
+footer ul {
+    list-style: none;
+    font-weight: bold;
+    margin-left: -30px;
+    color: #084d39;
+}
 
-footer ul{list-style: none; font-weight: bold; margin-left: -30px; color: #084d39;}
+footer a {
+    color: #d4d3d3;
+}
 
-footer a{color: #d4d3d3;}
-footer a:hover{color: #757575;}
+footer a:hover {
+    color: #757575;
+}

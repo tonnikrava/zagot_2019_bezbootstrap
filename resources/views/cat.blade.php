@@ -16,8 +16,7 @@
 
 @section('content')
 	
-	
-	
+
 	
 	<section>
 		<div class="container-fluid px-0">
@@ -26,44 +25,36 @@
 				     data-src="@foreach ($catname as $catnames){{Voyager::image($catnames->thumbnail('cropped','img'))}}@endforeach"/>
 				<div class="container my-5 py5">
 					<h1 class="text-uppercase text-white text-center" style="margin-top:10%;margin-bottom:4%;">
-						Категория @foreach ($catname as $catnames) {!!  $catnames->name!!}  @endforeach</h1>
-					@foreach ($catname as $catnames) {!!$catnames->discription!!}  @endforeach
+						Категория @foreach ($catname as $catnames) {!!  $catnames->name!!}  </h1>
+					{!!$catnames->discription!!}  @endforeach
 				</div>
 			</div>
 		</div>
-		<section>
-			
-			
-			<div class="container-fluid bg-light pt-5">
+
+			<div class="container-fluid bg-light py-5">
 				
 				
-				<div class="container mt-5">
+				<div class="container">
 					
 					
-					<div class="row">
+					<div class="d-flex flex-wrap justify-content-center justify-content-sm-between">
 						@foreach ($cat as $cats)
-							
-							<div class="col-md-3">
+
+							<div class="kartochkatovara p-3 mt-3">
 								<a href="{!!  $cats->category_id !!}/{!!  $cats->slug !!}">
-									<div class="card mb-4">
+
 										<img class="w-100" alt="новости"
 										
 
-										src="
-										     @if(isset($cats->image))
-													{{Voyager::image($cats->thumbnail('small','image'))}}
-										
-										     @else
-										     ../images/empty-product.jpg
-										@endif"/>
-										<div class="card-body">
+										src="@if(isset($cats->image)){{Voyager::image($cats->thumbnail('small','image'))}}@else ../images/empty-product.jpg @endif"/>
+
 											<h6 class="mt-3">{!!  $cats->title !!}</h6>
 										
 										
-										</div>
-										<div class="card-date">
-											<p>{!!  $cats->price !!} грн</p></div>
-									</div>
+
+
+											<p>{!!  $cats->price !!}</p>
+
 								</a>
 							</div>
 						
@@ -75,7 +66,7 @@
 			</div>
 			
 			
-			<div class="container-fluid px-0" id="counter">
+			<div class="container-fluid px-0">
 				<div class="jumbotron-foto pt-4 pb-4" style="background-color: rgba(98, 98, 98, 0.15); height: 400px">
 					<img class="lazyy fonimg" data-src="images/fon-aktsia.jpg" alt="study in Ukranr background">
 					<div class="container">
