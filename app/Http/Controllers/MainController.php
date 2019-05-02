@@ -23,7 +23,7 @@ class MainController extends Controller
     }
 
 
-    public function newss() // вывод оглавлений новостей на сайте
+    public function newss() // вывод оглавлений новостей на  сайте
     {
         $novostis = Nowosti::latest()->get();
 
