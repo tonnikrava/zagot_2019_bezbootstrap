@@ -7,6 +7,7 @@
     @show<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="icon" type="image/png" sizes="32x32" href="../storage/{{setting('site.favicon')}}">
+
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/style2.css') }}" rel="stylesheet" type="text/css">
