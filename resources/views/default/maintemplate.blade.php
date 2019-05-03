@@ -7,37 +7,70 @@
     @show<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="icon" type="image/png" sizes="32x32" href="../storage/{{setting('site.favicon')}}">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/style2.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/stelarnav.css') }}" rel="stylesheet" type="text/css">
 </head>
 <body>
 
 <header>
+    <div class="cd-logo"> <a href="{{Route('home')}}">
+            <img class="logoimg" src="../storage/{{setting('site.logo')}}" height="auto" alt="">
+        </a></div>
 
     @section('navbar')
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-            <div class="container">
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
 
-                <a class="navbar-brand" href="{{Route('home')}}">
-                    <img class="logoimg" src="../storage/{{setting('site.logo')}}" height="auto" alt="">
-                </a>
 
-                <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
-                    {{menu('Glavnoe_menu')}}
-                </div>
-            </div>
+
+
+
+
+
+
+
+
+
+
+
+                    <nav class="cd-main-nav-wrapper">
+                        <ul class="cd-main-nav">
+                            {{menu('Glavnoe_menu')}}
+                        </ul> <!-- .cd-main-nav -->
+                    </nav> <!-- .cd-main-nav-wrapper -->
+
+                    <a href="#0" class="cd-nav-trigger"><span></span></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </nav>
     @show
 
 
 </header>
-<main>
+
+
+<main class="cd-main-content">
+
     <article>
         <h2 class="semantics_info">Основной контент на сайте</h2>
 
@@ -48,6 +81,7 @@
         @yield('content')
 
     </article>
+
 </main>
 
 @section('news')
@@ -114,8 +148,9 @@
             <div style="width: 100%; height:30px; background-color: rgb(164, 202, 189);">
                 <div class="container">
                     <div style="text-align:left;font-size:0.7em;padding-top: 7px; float: left;letter-spacing: -0.05em;">
-                        <a style="text-decoration:none!impontant;color:#5a5a5a!important;"
-                           href="https://www.razrabotka-saitov.com" target="_blank">Создание сайтов</a>
+                      {{--  <a style="text-decoration:none!impontant;color:#5a5a5a!important;"
+
+                         href="https://www.razrabotka-saitov.com" target="_blank">Создание сайтов</a> /* --}}
                     </div>
                     <p style="text-align: center;font-weight: bold;padding-top: 6px;font-size: 0.8em;color: #084d39;">
                         &copy; {{setting('site.title')}} 2007 - <?php echo date("Y"); ?></p>
@@ -128,10 +163,9 @@
 
 <link href="{{ asset('css/style2.css') }}" rel="stylesheet" type="text/css">
 <script src="{{ asset('js/java-griobanij-skript.js') }}"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+
 <script src="{{ asset('js/menu.js') }}"></script>
+<script src="{{ asset('js/stellarnavmenu.js') }}"></script>
 <script src="{{ asset('js/imgzoom.js') }}"></script>
 
 
@@ -152,6 +186,8 @@
     $(function () {
         $('.lazy').lazy({combined: true, delay: 4000})
     });
+
+
 
 
 

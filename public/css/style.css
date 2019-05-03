@@ -1,3 +1,39 @@
+*{margin:0;padding:0;}
+article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {display: block;}
+body {font-family: Helvetica, Arial, sans-serif; color: #3e3e3e; font-size: 16px;}
+
+h1 {font-size: 2em;line-height: 1.1em;letter-spacing: -0.05em;}
+h2 {font-size: 1.7em;line-height: 1.1em;letter-spacing: -0.06em;}
+h3 {font-size: 1.6em;line-height: 1.1em;letter-spacing: -0.06em;}
+h4 {font-size: 1.5em;line-height: 1.1em; letter-spacing: -0.05em;}
+h5 {font-size: 1.4em;line-height: 1.1em;letter-spacing: -0.05em;}
+h6 {font-size: 1.3em;letter-spacing: -0.02em;}
+
+
+a {text-decoration: none; color:#0087ff}
+a:hover {text-decoration: underline; color: rgb(0, 158, 255);}
+a:active {text-decoration: none; color: rgb(255, 142, 20);}
+
+p {line-height: 1.5em; letter-spacing: .01em; color: #333;font-size: 1em;}
+
+mark { background-color: rgba(255, 132, 0, 0.32);padding: 0px 6px 4px 7px;}
+
+
+@media (min-width: 1599px) {
+    h1 {font-size: 2.4em;}
+    h2 {font-size: 2em;}
+    h3 {font-size: 1.9em;}
+    h4 {font-size: 1.8em;}
+    h5 {font-size: 1.7em;}
+    h6 {font-size: 1.5em;}
+    p {font-size: 1.2em;}
+
+
+}
+
+
+
+
 a {
     color: #40679D;
 }
