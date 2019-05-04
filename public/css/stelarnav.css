@@ -192,6 +192,7 @@ header::before {
         }
 .cd-main-nav {
         font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+
         text-transform: uppercase;
         position: fixed;
         z-index: 1;
@@ -209,7 +210,7 @@ header::before {
         }
 .cd-main-nav a {
         display: block;
-        padding: .9em 2em .9em 1em;
+        padding: .4em 2em .4em 1em;
         border-bottom: 1px solid #33414a;
         color: #ffffff;
         -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
@@ -309,7 +310,7 @@ header::before {
         }
 @media only screen and (min-width: 1024px) {
 
-        .borderr {
+        .borderr { /* добовляет подчёркивание к аетивному пункту */
                 border-bottom: rgba(255, 255, 255, 0.32) 4px solid;
                 }
         .cd-main-nav {
@@ -318,8 +319,8 @@ header::before {
                 width: 100%;
                 height: 50px;
                 line-height: 43px;
-                /* padding left = logo size + logo left position
-                padding: 0 5% 0 calc(5% + 124px);*/
+
+                padding: 0 5% 0 calc(5% + 124px);
                 background: transparent;
                 text-align: right;
                 }
@@ -389,7 +390,7 @@ header::before {
         .cd-main-nav li ul {
 
                 /* padding left = logo size + logo left position*/
-                padding: 20px 15% 0 calc(5% + 124px);
+                padding: 20px 14% 0 calc(5% + 124px);
                 -webkit-transform: translateY(-80px);
                 -moz-transform: translateY(-80px);
                 -ms-transform: translateY(-80px);
