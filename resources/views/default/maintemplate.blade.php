@@ -4,7 +4,8 @@
     @section('mainheader')<title>{{setting('site.title')}}</title>
     <meta name="keywords" content="">
     <meta name="description" content="{{setting('site.description')}}">
-    @show<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    @show
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="icon" type="image/png" sizes="32x32" href="../storage/{{setting('site.favicon')}}">
 
@@ -15,56 +16,27 @@
 </head>
 <body>
 
-<header>
-    <div class="cd-logo"> <a href="{{Route('home')}}">
-            <img class="logoimg" src="../storage/{{setting('site.logo')}}" height="auto" alt="">
-        </a></div>
-
-    @section('navbar')
+<header class="navbar">
+    <div class="container-fluid">
+        <div class="container">
 
 
+            <div class="cd-logo"><a href="{{Route('home')}}">
+                    <img class="logoimg" src="../storage/{{setting('site.logo')}}" height="auto" alt="">
+                </a></div>
 
+            @section('navbar')
+                <nav class="cd-main-nav-wrapper">
+                    <ul class="cd-main-nav">
+                        {{menu('Glavnoe_menu')}}
+                    </ul> <!-- .cd-main-nav -->
+                </nav> <!-- .cd-main-nav-wrapper -->
 
+                <a href="#0" class="cd-nav-trigger"><span></span></a>
 
-
-
-
-
-
-
-
-
-                    <nav class="cd-main-nav-wrapper">
-                        <ul class="cd-main-nav">
-                            {{menu('Glavnoe_menu')}}
-                        </ul> <!-- .cd-main-nav -->
-                    </nav> <!-- .cd-main-nav-wrapper -->
-
-                    <a href="#0" class="cd-nav-trigger"><span></span></a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </nav>
-    @show
+            @show
+        </div>
+    </div>
 
 
 </header>
@@ -149,9 +121,9 @@
             <div style="width: 100%; height:30px; background-color: rgb(164, 202, 189);">
                 <div class="container">
                     <div style="text-align:left;font-size:0.7em;padding-top: 7px; float: left;letter-spacing: -0.05em;">
-                      {{--  <a style="text-decoration:none!impontant;color:#5a5a5a!important;"
+                        {{--  <a style="text-decoration:none!impontant;color:#5a5a5a!important;"
 
-                         href="https://www.razrabotka-saitov.com" target="_blank">Создание сайтов</a> /* --}}
+                           href="https://www.razrabotka-saitov.com" target="_blank">Создание сайтов</a> /* --}}
                     </div>
                     <p style="text-align: center;font-weight: bold;padding-top: 6px;font-size: 0.8em;color: #084d39;">
                         &copy; {{setting('site.title')}} 2007 - <?php echo date("Y"); ?></p>
@@ -189,13 +161,7 @@
     });
 
 
-
-
-
-    
-
 </script>
-
 
 
 </body>
