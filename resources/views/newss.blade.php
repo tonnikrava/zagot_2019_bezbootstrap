@@ -42,16 +42,17 @@
 
                     <div class="col-md-3">
                         <a href="news/{!!  $novostiss->slug !!}">
-                            <div class="card mb-4">
-                                <img class="w-100" alt="новости"
-                                     src="{{Voyager::image($novostiss->thumbnail('cropped','foto1'))}}"/>
-                                <div class="card-body">
-                                    <h6 class="mt-3">{!!  $novostiss->title !!}</h6>
+                            <div class="novosti mb-4">
+                                <img alt="новости"
+                                     src="{{Voyager::image($novostiss->thumbnail('small','foto1'))}}"/>
+                                <div class="novosti-body w-100">
+                                    <h6>{!!  $novostiss->title !!}</h6>
 
 
                                 </div>
-                                <div class="card-date">
-                                    <p>{!!  $novostiss->created_at->format('d-m-Y') !!}</p></div>
+                                <div class="novosti-date">
+                                    <p>{!!  $novostiss->created_at->format('d-m-Y') !!}</p>
+                                </div>
                             </div>
                         </a>
                     </div>

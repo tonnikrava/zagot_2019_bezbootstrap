@@ -3,7 +3,6 @@
     <CssCodeStyleSettings>
       <option name="BLANK_LINES_BETWEEN_BLOCKS" value="0" />
       <option name="KEEP_SINGLE_LINE_BLOCKS" value="true" />
-      <option name="ALIGN_CLOSING_BRACE_WITH_PROPERTIES" value="true" />
     </CssCodeStyleSettings>
     <codeStyleSettings language="CSS">
       <indentOptions>

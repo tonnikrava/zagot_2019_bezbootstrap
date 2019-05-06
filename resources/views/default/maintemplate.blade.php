@@ -106,10 +106,16 @@
                                  style="background-color: rgba(0, 0, 0, 0)!important;">
 
 
-                                <div class="navbar-collapse collapse show" id="navbarSupportedContent"
-                                >
-                                    {{menu('Glavnoe_menu')}}
+                                <div>
 
+                                    <ul>
+                                        <li><a href="/">Главная </a></li>
+                                        <li><a class="" href="{{ asset('o-nas') }}">О нас </a></li>
+                                        <li><a class="" href="{{ asset('primeri') }}">Примеры работ </a></li>
+                                        <li><a class="" href="{{ asset('news') }}">Новости </a></li>
+                                        <li><a class="" href="{{ asset('contacts') }}">Контакты </a></li>
+
+                                    </ul>
                                 </div>
                             </nav>
                         </div>

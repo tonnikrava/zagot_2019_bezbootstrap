@@ -19,19 +19,47 @@
 @section('content')
 
 
-    <section>
-        <div class="container-fluid px-0" id="counter">
-            <nav aria-label="breadcrumb" style="background-color: #deffeb;">
-                <div class="container">
+
+    <div class="container-fluid px-0">
+        <div class="jumbotron-foto py-5 header_jamberton_foto"
+             style="background-color: rgba(0, 0, 0, 0.8196078431372549);">
+            <img class="lazyy fonimg" style="opacity: 0.15;" alt=" "
+                 data-src="@foreach ($novosti as $novostis)
+                 @if(isset($novostis->foto1))
+                 {{Voyager::image($novostis->thumbnail('cropped','foto1'))}} @else../images/fon-news-vverh.jpg @endif
+                 @endforeach"/>
+            <div class="container my-5 py5">
+                <h1 class="text-uppercase text-white text-center" style="margin-top:10%;margin-bottom:4%;">
+                    @foreach ($novosti as $novostis) {!!  $novostis->title!!}  </h1>@endforeach
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid bg-light pt-3">
+
+
+        <div class="container overflow-hidden">
+
+            <nav aria-label="breadcrumb">
+
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/">HOME</a></li>
-                        <li class="breadcrumb-item"><a href="../university">UNIVERSITIES OF UKRAINE</a></li>
+                        <li class="breadcrumb-item"><a href="/">Главная</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('newss') }}">Новости</a></li>
+
                         <li class="breadcrumb-item active" aria-current="page">@foreach ($novosti  as $novostis)
                                 {!!  $novostis->title !!}
                             @endforeach</li>
+
                     </ol>
-                </div>
+
             </nav>
+
+
+
+
+
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 p-3 col-lg-9">
@@ -49,6 +77,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </section>
 
 
