@@ -1,3 +1,19 @@
+.gradient-text{background:rgb(60,160,208);/* Old browsers */
+    background:-moz-linear-gradient(-45deg,rgba(60,160,208,1) 0%,rgba(75,24,165,1) 80%);/* FF3.6-15 */
+    background:-webkit-linear-gradient(-45deg,rgba(60,160,208,1) 0%,rgba(75,24,165,1) 80%);/* Chrome10-25,Safari5.1-6 */
+    background:linear-gradient(135deg,rgba(60,160,208,1) 0%,rgba(75,24,165,1) 80%);/* W3C,IE10+,FF16+,Chrome26+,Opera12+,Safari7+ */
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3ca0d0',endColorstr='#4b18a5',GradientType=1);/* IE6-9 fallback on horizontal gradient */
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.myButton{transition-duration: 0.5s;background-color:transparent;-moz-border-radius:33px;-webkit-border-radius:33px;border-radius:33px;border:2px solid #8f39f0;display:inline-block;cursor:pointer;color:#890ddb;font-family:Trebuchet MS;font-size:21px;padding:8px 25px;text-decoration:none}
+.myButton:hover{background-color:transparent;background-color:transparent;-moz-border-radius:20px;-webkit-border-radius:20px;border-radius:20px;border:2px solid #245bff;color:#002bff!important;}
+.myButton:active{position:relative;top:1px}
+
+/*  на самом верху заголовок h1 и фотка  */
+.vverhotstup{height: 1px;}
+@media (min-width:992px){
+    .vverhotstup{height: 70px;}
+}
+
 /*  линия перед h2 заголовком   */
 
 .statitext h2{padding-left:27px;position:relative}
@@ -34,6 +50,24 @@
 /*
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------header------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ - */
 
+/* --- статьи с видео -- - */
+.statitext p{}
+.statitext h3{margin:0 0 5% 0;padding-left:27px;position:relative;font-size:1.2em;font-family:"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;font-weight:600}
+.statitext h3:before{position:absolute;left:0;top:1px;content:'';height:102%;width:6px;background:#88d5f1}
+.stativideo img{width:100%; margin-bottom: 30px;}
+@media (min-width:576px){
+    .statitext h3{font-size:1.5em}
+}
+@media (min-width:767px){
+    .statitext{}
+    .stativideo img{margin-bottom: 0;}
+}
+@media (min-width:992px){
+    .statitext h3{font-size:2.2em}
+    .statitext{}
+}
+
+
 /*
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------rj контент ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ - */
 /* -карточка товара в категории - */
@@ -53,7 +87,7 @@
     .zagolovokform{width:463px;height:250px;padding:20px;margin:46px 0 0 0;background:url(/images/green-left-up.png) 0 0 no-repeat,url(/images/green-right-down.png) 100% 100% no-repeat}
 }
 
-/*  вывод новостей   */
+/*----------вывод блока новостей----------*/
 
 .novosti{width:250px;height:211px;box-shadow:0 1px 2px rgba(0,0,0,.1);border:0 solid rgba(0,0,0,.125);border-radius:0;overflow:hidden;position:relative}
 .novosti img{-webkit-transform:scale(1);transform:scale(1);-webkit-transition:.4s ease-in-out;transition:.4s ease-in-out;width:100%;filter:grayscale(60%);position:absolute}
@@ -63,6 +97,19 @@
 .novosti-date{position:absolute;right:0;bottom:0;width:71px;height:22px;z-index:2}
 .novosti-date p{font-size:0.8em;color:#d8d8d8}
 
+/*----------вывод отдельной новости----------*/
+
+.novosti-block{margin-top: 2%;}
+.novosti-block p{font-size: 1em;}
+.novosti-block-img-1{width:80%;  margin: 20px auto; display: block }
+.novosti-block-img-2{width:80%;  margin: 20px auto; display: block }
+.novosti-block-img-3{width:80%;  margin: 20px auto; display: block}
+@media (min-width:992px){
+    .novosti-block p{font-size: 1.2em;}
+    .novosti-block-img-1{float:left; width:400px; margin: 0 30px 30px 0}
+    .novosti-block-img-2{width:40%; float:left; margin-bottom: 30px;}
+    .novosti-block-img-3{width:40%; float:right; margin-bottom: 30px;}
+}
 /*----------footer------------*/
 
 ul.footercont{list-style:none;margin-top:14px;margin-left:-27px;font-weight:600;font-family:"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif}
@@ -115,8 +162,8 @@ ul.footermenu{list-style:none;margin-top:6px;margin-left:-16px;font-weight:600;f
 /** ---------- страница контакты --------- **/
 
 .sprite{background-image:url(/images/spritik-new-3x.png);background-size:412px}
-.sprite2{background-image:url(/images/spritik-new-3x.png)}
+
 .semantics_info{display:none}
-footer ul{list-style:none;font-weight:bold;margin-left:-30px;color:#084d39}
+footer ul{list-style:none;font-weight:bold;margin-left:-30px;color:#6b6b6b}
 footer a{color:#d4d3d3}
 footer a:hover{color:#757575}

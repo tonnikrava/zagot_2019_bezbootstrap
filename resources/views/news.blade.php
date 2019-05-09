@@ -18,8 +18,6 @@
 
 @section('content')
 
-
-
     <div class="container-fluid px-0">
         <div class="jumbotron-foto py-5 header_jamberton_foto"
              style="background-color: rgba(0, 0, 0, 0.8196078431372549);">
@@ -29,59 +27,46 @@
                  {{Voyager::image($novostis->thumbnail('cropped','foto1'))}} @else../images/fon-news-vverh.jpg @endif
                  @endforeach"/>
             <div class="container my-5 py5">
-                <h1 class="text-uppercase text-white text-center" style="margin-top:10%;margin-bottom:4%;">
+                <h1 class="text-uppercase text-white text-center"
+                    style="margin-top:11%;margin-bottom:1%;letter-spacing: 0.05em;">
                     @foreach ($novosti as $novostis) {!!  $novostis->title!!}  </h1>@endforeach
-
             </div>
         </div>
     </div>
-
-
     <div class="container-fluid bg-light pt-3">
-
-
         <div class="container overflow-hidden">
-
             <nav aria-label="breadcrumb">
 
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/">Главная</a></li>
-                        <li class="breadcrumb-item"><a href="{{ route('newss') }}">Новости</a></li>
-
-                        <li class="breadcrumb-item active" aria-current="page">@foreach ($novosti  as $novostis)
-                                {!!  $novostis->title !!}
-                            @endforeach</li>
-
-                    </ol>
-
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Главная</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('newss') }}">Новости</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">@foreach ($novosti  as $novostis)
+                            {!!  $novostis->title !!}
+                        @endforeach</li>
+                </ol>
             </nav>
 
-
-
-
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 p-3 col-lg-9">
-                        @foreach ($novosti  as $novostis)
-                            <h1 class="text-uppercase gradient-text-h2 mt-3">{!!  $novostis->title !!}</h1>
-                            <img class="mt-3 w-100" alt="новости"
-                                 src="{{Voyager::image($novostis->thumbnail('medium','foto1'))}}"/>
-                            {!!  $novostis->body !!}
-                            <img class="mt-3 w-100" alt="новости"
-                                 src="{{Voyager::image($novostis->thumbnail('medium', 'foto2'))}}"/>
-                            <img class="mt-3 w-100" alt="новости"
-                                 src="{{Voyager::image($novostis->thumbnail('medium', 'foto3'))}}"/>
-                        @endforeach
-                    </div>
-                </div>
+            <div class="novosti-block">
+                @foreach ($novosti  as $novostis)
+                    @if(isset($novostis->foto1))
+                        <img class="novosti-block-img-1" alt="новости"
+                             src="{{Voyager::image($novostis->thumbnail('medium','foto1'))}}"/>
+                    @endif
+                    {!!  $novostis->body !!}
+                    @if(isset($novostis->foto2))
+                        <img class="novosti-block-img-2" alt="новости"
+                             src="{{Voyager::image($novostis->thumbnail('medium', 'foto2'))}}"/>
+                    @endif
+                    @if(isset($novostis->foto3))
+                        <img class="novosti-block-img-3" alt="новости"
+                             src="{{Voyager::image($novostis->thumbnail('medium', 'foto3'))}}"/>
+                    @endif
+                @endforeach
             </div>
+
         </div>
     </div>
     </section>
-
-
-
     <div class="container-fluid px-0">
         <div class="jumbotron-foto pt-4 pb-4" style="background-color: rgba(98, 98, 98, 0.15); height: 400px">
             <img class="lazyy fonimg" data-src="../images/fon-aktsia.jpg" alt="study in Ukranr background">
@@ -91,7 +76,7 @@
                         <h2 style="color: #009c48 !important; text-align: center; margin-top: 12px;"> Ноt deal </h2>
                         <div style="margin-top: 29px; color: #545454; font-size: 15px;">
                             <p>Fill out the form now and get a discount on paperwork for study in Ukraine
-                               from our company</p>
+                                from our company</p>
                         </div>
                         <div class="hotdealbootonn">
                             <a href="../forma">
@@ -103,8 +88,6 @@
             </div>
         </div>
     </div>
-
-
 
 @endsection
 

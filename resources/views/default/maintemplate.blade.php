@@ -68,13 +68,13 @@
 
             <h2 class="semantics_info">Футер сайта</h2>
             <div class="d-flex flex-row">
-                <div class="col-5 p-1" style="background-color:#084d39"></div>
-                <div class="col-4 p-1" style="background-color:#03db9c"></div>
-                <div class="col-2 p-1" style="background-color:#678cb4"></div>
-                <div class="col-1 p-1" style="background-color:#ffd967"></div>
+                <div class="col-5 p-1" style="background-color:#025cac"></div>
+                <div class="col-4 p-1" style="background-color:#678cb4"></div>
+                <div class="col-2 p-1" style="background-color:#a1c3e7"></div>
+                <div class="col-1 p-1" style="background-color:#d7ebff"></div>
             </div>
             <div class="jumbotron-foto pt-4 pb-4" style="background-color: rgba(98, 98, 98, 0.15);">
-                <img class="lazyy fonimg" data-src="../images/study-in-ukraine-fon-footer.jpg"
+                <img class="lazyy fonimg" data-src="../images/fon-footer.jpg"
                      alt="study in ukraine fon footer">
                 <div class="container">
                     <div class="row justify-content-between">
@@ -82,7 +82,7 @@
                             <div class="sprite footerlogo mt-5">
                             </div>
                             <ul>
-                                <li><a style="color: #084d39;" href="tel:+380639970438">+3 8(063)997-04-38</a><span
+                                <li><a style="color: #6b6b6b;" href="tel:+3806300000">+3 8(063)000-00-00</a><span
                                             style="font-size: 0.7em;font-weight: 400;"> (Whats,Teleg)</span>
                                 </li>
 
@@ -90,48 +90,33 @@
                                 <li>Ukraine, Kharkov</li>
                                 <li>Pushkinskaya str 47</li>
 
-                                <li>aston.ukraine@gmail.com</li>
+                                <li>vashapochta@gmail.com</li>
 
 
                             </ul>
 
+
+                        </div>
+                        <div class="col-8 col-md-6 col-lg-3 align-self-center ml-5 ml-md-0">
                             <div class="p-2" style="height:50px; width: 220px;">
                                 {!!setting('site.sots_ikonki')!!}
 
                             </div>
-                        </div>
-                        <div class="col-8 col-md-6 col-lg-3 align-self-center ml-5 ml-md-0">
 
-                            <nav class="navbar navbar-text navbar-light"
-                                 style="background-color: rgba(0, 0, 0, 0)!important;">
-
-
-                                <div>
-
-                                    <ul>
-                                        <li><a href="/">Главная </a></li>
-                                        <li><a class="" href="{{ asset('o-nas') }}">О нас </a></li>
-                                        <li><a class="" href="{{ asset('primeri') }}">Примеры работ </a></li>
-                                        <li><a class="" href="{{ asset('news') }}">Новости </a></li>
-                                        <li><a class="" href="{{ asset('contacts') }}">Контакты </a></li>
-
-                                    </ul>
-                                </div>
-                            </nav>
                         </div>
                     </div>
 
                 </div>
 
             </div>
-            <div style="width: 100%; height:30px; background-color: rgb(164, 202, 189);">
+            <div style="width: 100%; height:30px; background-color: rgb(103, 140, 180);">
                 <div class="container">
                     <div style="text-align:left;font-size:0.7em;padding-top: 7px; float: left;letter-spacing: -0.05em;">
                         {{--  <a style="text-decoration:none!impontant;color:#5a5a5a!important;"
 
                            href="https://www.razrabotka-saitov.com" target="_blank">Создание сайтов</a> /* --}}
                     </div>
-                    <p style="text-align: center;font-weight: bold;padding-top: 6px;font-size: 0.8em;color: #084d39;">
+                    <p style="text-align: center;font-weight: bold;padding-top: 6px;font-size: 0.8em;color: #d0d0d0;">
                         &copy; {{setting('site.title')}} 2007 - <?php echo date("Y"); ?></p>
                 </div>
             </div>
@@ -141,11 +126,13 @@
 @show
 
 <link href="{{ asset('css/style2.css') }}" rel="stylesheet" type="text/css">
+<link href="{{ asset('css/otzivi.css') }}" rel="stylesheet" type="text/css">
 <script src="{{ asset('js/java-griobanij-skript.js') }}"></script>
 
 <script src="{{ asset('js/menu.js') }}"></script>
 <script src="{{ asset('js/stellarnavmenu.js') }}"></script>
 <script src="{{ asset('js/imgzoom.js') }}"></script>
+<script src="{{ asset('js/otzivi.js') }}"></script>
 
 
 <script>
@@ -167,8 +154,17 @@
     });
 
 
+    $(document).ready(function(){
+        $("#testimonial-slider").owlCarousel({
+            items:2,
+            itemsDesktop:[1000,2],
+            itemsDesktopSmall:[979,2],
+            itemsTablet:[767,1],
+            pagination:true,
+            autoPlay:true
+        });
+    });
 </script>
-
 
 </body>
 </html>
