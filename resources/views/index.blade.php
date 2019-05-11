@@ -20,8 +20,8 @@
 
     <section>
         <div class="container-fluid px-0" style="margin-top: -24px;">
-            <div class="jumbotron-foto py-5 header_jamberton_foto"><img class="fonimg"
-                                                                        src="../images/fon-glavn-vverh.jpg" alt=" "/>
+            <div class="jumbotron-foto py-5 header_jamberton_foto "><img class="fonimg lazyy"
+                                                                        data-src="../images/fon-glavn-vverh.jpg" alt=" "/>
                 <div class="vverhotstup">&nbsp;</div>
                 <div class="container my-5 py5">
                     <div class="row pt-5 mt-5">
@@ -134,31 +134,35 @@
             <div class="container-fluid overflow-hidden pt-2 pb-2 pt-md-5 pb-md-5">
                 <h2 class="text-center gradient-text mt-5 display-4">О нашей компании в цифрах</h2>
                 <div class="container mt-4 mb-4 pb-5">
-                    <div id="counter" class="d-flex flex-wrap justify-content-center justify-content-sm-between">
+                    <div class="d-flex flex-wrap justify-content-center justify-content-sm-between">
                         <div class="chetbl p-3 mt-3 position-relative">
-                            <div class="sprite chetbl-odin-img mt-2">&nbsp;</div>
-                            <div class="counter-value" data-count="8">8</div>
+
+                            <div class="counter-value"><span class='numscroller' data-min='0' data-max='8'
+                                                             data-delay='5' data-increment='1'></span></div>
                             <p>Лет на рынке
                                 <br/>создания сайтов</p>
                             <div class="chetbldiv">&nbsp;</div>
                         </div>
                         <div class="chetbl p-3 mt-3 position-relative">
-                            <div class="sprite chetbl-dva-img mt-2">&nbsp;</div>
-                            <div class="counter-value" data-count="184">184</div>
+
+                            <div class="counter-value"><span class='numscroller' data-min='0' data-max='17'
+                                                             data-delay='5' data-increment='1'></span></div>
                             <p>Созданных
                                 <br/>интернет сайтов</p>
                             <div class="chetbldiv">&nbsp;</div>
                         </div>
                         <div class="chetbl p-3 mt-3 position-relative">
-                            <div class="sprite chetbl-tri-img mt-2">&nbsp;</div>
-                            <div class="counter-value" data-count="270">270</div>
+
+                            <div class="counter-value"><span class='numscroller' data-min='0' data-max='83'
+                                                             data-delay='5' data-increment='1'></span></div>
                             <p>Сайтов продвинуто и
                                 <br/>SEO оптимизировано</p>
                             <div class="chetbldiv">&nbsp;</div>
                         </div>
                         <div class="chetbl p-3 mt-3 position-relative">
-                            <div class="sprite chetbl-chet-img mt-2">&nbsp;</div>
-                            <div class="counter-value" data-count="84862046">84862046</div>
+
+                            <div class="counter-value"><span class='numscroller' data-min='0' data-max='999'
+                                                             data-delay='5' data-increment='1'></span></div>
                             <p>Строчек кода
                                 <br/>написано</p>
                             <div class="chetbldiv">&nbsp;</div>
@@ -173,92 +177,38 @@
                 <div class="row">
                     <div class="col-md-12 mb-3">
                         <div id="testimonial-slider" class="owl-carousel">
-                            <div class="testimonial">
-                                <div class="pic">
-                                    <img src="images/klient-1.jpg" alt="">
-                                </div>
-                                <div class="testimonial-content">
-                                    <h3 class="testimonial-title">Williamson
-                                        <small class="post">Web Designer</small>
-                                    </h3>
-                                    <p class="description">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam amet animi
-                                        blanditiis consequatur debitis dicta distinctio, enim error eum iste libero
-                                    </p>
-                                </div>
-                            </div>
 
-                            <div class="testimonial">
-                                <div class="pic">
-                                    <img src="../images/klient-2.jpg" alt="">
-                                </div>
-                                <div class="testimonial-content">
-                                    <h3 class="testimonial-title">kristiana
-                                        <small class="post">Web Developer</small>
-                                    </h3>
-                                    <p class="description">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam amet animi
-                                        blanditiis consequatur debitis dicta distinctio, enim error eum iste libero
-                                    </p>
-                                </div>
-                            </div>
+                            @foreach ($otzivi as $otzivis)
 
-                            <div class="testimonial">
-                                <div class="pic">
-                                    <img src="images/klient-1.jpg" alt="">
-                                </div>
-                                <div class="testimonial-content">
-                                    <h3 class="testimonial-title">Williamson
-                                        <small class="post">Web Designer</small>
-                                    </h3>
-                                    <p class="description">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam amet animi
-                                        blanditiis consequatur debitis dicta distinctio, enim error eum iste libero
-                                    </p>
-                                </div>
-                            </div>
 
-                            <div class="testimonial">
-                                <div class="pic">
-                                    <img src="../images/klient-2.jpg" alt="">
+                                <div class="testimonial">
+                                    <div class="pic">
+                                        <img src="{{Voyager::image($otzivis->photo)}}" alt="">
+                                    </div>
+                                    <div class="testimonial-content">
+                                        <h3 class="testimonial-title">{!! $otzivis->name !!}
+                                            <small class="post">{!! $otzivis->prof !!}</small>
+                                        </h3>
+                                        <p class="description">
+                                            {!! $otzivis->textotziv !!}
+
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="testimonial-content">
-                                    <h3 class="testimonial-title">kristiana
-                                        <small class="post">Web Developer</small>
-                                    </h3>
-                                    <p class="description">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam amet animi
-                                        blanditiis consequatur debitis dicta distinctio, enim error eum iste libero
-                                    </p>
-                                </div>
-                            </div>
+
+
+
+                            @endforeach
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container-fluid px-0">
-            <div class="jumbotron-foto pt-4 pb-4" style="background-color: rgba(98, 98, 98, 0.15); height: 400px;"><img
-                        class="lazyy fonimg" alt="study in Ukranr background" data-src="images/fon-aktsia.jpg"/>
-                <div class="container">
-                    <div class="zagolovokform" style="background-color: rgba(255, 255, 255, 0.6196078431372549);">
-                        <div>
-                            <h2 class="text-center gradient-text mt-2 display-4">Акция</h2>
 
-                            <div style="margin-top: 29px; color: #545454; font-size: 15px;">
-                                <p>Fill out the form now and get a discount on paperwork for study in Ukraine from our
-                                    company</p>
-                            </div>
-                            <div class="hotdealbootonn">
-                                <div class="hotdealbooton">fill in the form</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
+    {!! setting('site.aktsia')!!}
 
 @endsection
 
@@ -293,8 +243,7 @@
 
                 @endforeach
 
-                    <a href="news" class="myButton mx-auto">Все новости</a>
-
+                <a href="news" class="myButton mx-auto">Все новости</a>
 
 
             </div>

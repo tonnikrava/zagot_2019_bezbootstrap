@@ -8,7 +8,7 @@ use TCG\Voyager\Models\Category;
 use TCG\Voyager\Models\Post;
 use App\Nowosti;
 use App\Tovari;
-
+use App\Otzivi;
 
 class MainController extends Controller
 {
@@ -16,8 +16,10 @@ class MainController extends Controller
     {
         $material = Page::where('slug', '=', 'index')->get();
         $novosti = Nowosti::latest()->limit(4)->get(); // Вывод 4-x новостей на главной
+        $otzivi = Otzivi::all();
         return view('index')->with([
             'novosti' => $novosti,
+            'otzivi' => $otzivi,
             'material' => $material
         ]);
     }

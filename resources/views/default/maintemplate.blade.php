@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" prefix="og: http://ogp.me/ns#">
+<html lang="ru">
 <head>
     @section('mainheader')<title>{{setting('site.title')}}</title>
     <meta name="keywords" content="">
@@ -74,7 +74,7 @@
                 <div class="col-1 p-1" style="background-color:#d7ebff"></div>
             </div>
             <div class="jumbotron-foto pt-4 pb-4" style="background-color: rgba(98, 98, 98, 0.15);">
-                <img class="lazyy fonimg" data-src="../images/fon-footer.jpg"
+                <img class="lazyy fonimg" style="opacity: 0.95;" data-src="../images/fon-footer.jpg"
                      alt="study in ukraine fon footer">
                 <div class="container">
                     <div class="row justify-content-between">
@@ -109,15 +109,13 @@
                 </div>
 
             </div>
-            <div style="width: 100%; height:30px; background-color: rgb(103, 140, 180);">
-                <div class="container">
-                    <div style="text-align:left;font-size:0.7em;padding-top: 7px; float: left;letter-spacing: -0.05em;">
-                        {{--  <a style="text-decoration:none!impontant;color:#5a5a5a!important;"
 
-                           href="https://www.razrabotka-saitov.com" target="_blank">Создание сайтов</a> /* --}}
-                    </div>
-                    <p style="text-align: center;font-weight: bold;padding-top: 6px;font-size: 0.8em;color: #d0d0d0;">
-                        &copy; {{setting('site.title')}} 2007 - <?php echo date("Y"); ?></p>
+
+            <div id="footer__niz__line">
+                <div class="container">
+                   {{-- <a href="https://www.razrabotka-saitov.com" target="_blank">Создание сайтов</a>--}}
+                    <p>&copy; {{setting('site.title')}} 2007 - <?php echo date("Y"); ?></p>
+
                 </div>
             </div>
         </div>
@@ -133,6 +131,7 @@
 <script src="{{ asset('js/stellarnavmenu.js') }}"></script>
 <script src="{{ asset('js/imgzoom.js') }}"></script>
 <script src="{{ asset('js/otzivi.js') }}"></script>
+<script src="{{ asset('js/counter.js') }}"></script>
 
 
 <script>
@@ -154,16 +153,18 @@
     });
 
 
-    $(document).ready(function(){
+    $(document).ready(function () { //коментарии клиентов
         $("#testimonial-slider").owlCarousel({
-            items:2,
-            itemsDesktop:[1000,2],
-            itemsDesktopSmall:[979,2],
-            itemsTablet:[767,1],
-            pagination:true,
-            autoPlay:true
+            items: 2,
+            itemsDesktop: [1000, 2],
+            itemsDesktopSmall: [979, 2],
+            itemsTablet: [767, 1],
+            pagination: true,
+            autoPlay: true
         });
     });
+
+
 </script>
 
 </body>
