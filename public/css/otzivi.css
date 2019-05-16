@@ -198,14 +198,14 @@
 .testimonial .pic:before {
         bottom: -10%;
         left: -10%;
-        border-bottom: 3px solid #E16B47;
-        border-left: 3px solid #E16B47;
+        border-bottom: 3px solid #927db8;
+        border-left: 3px solid #927db8;
 }
 .testimonial .pic:after {
         top: -10%;
         right: -10%;
-        border-top: 3px solid #e16b47;
-        border-right: 3px solid #e16b47;
+        border-top: 3px solid #927db8;
+        border-right: 3px solid #927db8;
 }
 .testimonial .pic img {
         width: 100%;
@@ -239,7 +239,7 @@
 
 .testimonial .testimonial-title {
         font-size: 24px;
-        color: #e16b47;
+        color: #927db8;
         text-transform: capitalize;
 }
 .testimonial .post {
@@ -259,7 +259,7 @@
 }
 .owl-theme .owl-controls .owl-page.active span,
 .owl-theme .owl-controls.clickable .owl-page:hover span {
-        background-color: #e16b47;
+        background-color: #927db8;
 }
 @media only screen and (max-width: 980px) {
         .testimonial {

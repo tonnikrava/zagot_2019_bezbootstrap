@@ -26,3 +26,8 @@
 .xzoom-caption{position:absolute;bottom:-43px;left:0;background:#000;width:100%;text-align:left}
 .xzoom-caption span{color:#fff;font-family:Arial,sans-serif;display:block;font-size:0.75em;font-weight:bold;padding:10px}
 /* -----------------------------------конец галлерея с фотками zoom ================================== */
+
+/* ------- уголки внизу и вверху --------- */
+.zagolovokform .pic:before { bottom: -10%;left: -10%; border-bottom: 3px solid #927db8;border-left: 3px solid #927db8;}
+.zagolovokform .pic:after {top: -10%;right: -10%; border-top: 3px solid #927db8; border-right: 3px solid #927db8;}
+/* ------- конец уголкам внизу и вверху --------- */

@@ -38,10 +38,10 @@
                 <div class="container mt-5">
 
 
-                    <div class="row">
+                    <div class="d-flex flex-wrap justify-content-center justify-content-sm-between">
                         @foreach ($novostis as $novostiss)
 
-                            <div class="col-md-3">
+
                                 <a href="news/{!!  $novostiss->slug !!}">
                                     <div class="novosti mb-4">
                                         <img alt="новости"
@@ -56,7 +56,7 @@
                                         </div>
                                     </div>
                                 </a>
-                            </div>
+
 
                         @endforeach
 

@@ -126,13 +126,13 @@
             </div>
         </section>
 
-        <div class="jumbotron-video" style="background-color: rgba(238, 238, 238, 0.19);">
-            <video class="lazy-direktor" autoplay="autoplay" loop="loop" muted="">
-                <source src="video/video-fon-22.webm" type="video/webm"/>
-                <source src="video/video-fon-2.mp4" type="video/mp4"/>
-            </video>
-            <div class="container-fluid overflow-hidden pt-2 pb-2 pt-md-5 pb-md-5">
-                <h2 class="text-center gradient-text mt-5 display-4">О нашей компании в цифрах</h2>
+
+
+
+        <div class="container-fluid px-0">
+            <div class="jumbotron-foto py-5 header_jamberton_foto" style="background-color: #f3f3f3;"><img class="fonimg lazyy"
+                                                                         data-src="../images/fon-tsifri.jpg" alt=" "/>
+                <h2 class="text-center mt-5 display-4" style="color: #37009b;">О нашей компании в цифрах</h2>
                 <div class="container mt-4 mb-4 pb-5">
                     <div class="d-flex flex-wrap justify-content-center justify-content-sm-between">
                         <div class="chetbl p-3 mt-3 position-relative">
@@ -221,10 +221,10 @@
         <div class="container mt-5 pb-5">
 
 
-            <div class="row">
+            <div class="d-flex flex-wrap justify-content-center justify-content-sm-between">
                 @foreach ($novosti as $novostiss)
 
-                    <div class="col-md-3 ">
+
                         <a href="news/{!!  $novostiss->slug !!}">
                             <div class="novosti mb-5">
                                 <img alt="новости"
@@ -239,7 +239,7 @@
                                 </div>
                             </div>
                         </a>
-                    </div>
+
 
                 @endforeach
 
